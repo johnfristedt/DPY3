@@ -1,0 +1,63 @@
+﻿html {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lucida Console', monaco, monospace;
+    margin: 0;
+    padding: 0;
+}
+
+.row {
+    margin: 0;
+    padding: 0;
+}
+
+#mainMenu {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#mainMenu li {
+    width: calc(100% / 4);
+    background: #bdc3c7;
+    float: left;
+    margin: 0;
+    padding: 8vw 1vw 0 0;
+    border-left: 0.5vw solid white;
+    text-align: right;
+    font-size: 4vw;
+}
+
+#mainMenu li a {
+    text-decoration: none;
+}
+
+#mainMenu li a:hover {
+    cursor: default;
+    text-decoration: none;
+}
+
+#mainMenu li:first-of-type {
+    border-left: none;
+}
+
+#mainMenu li:last-of-type {
+}
+
+.content {
+    background: gray;
+}
+
+.spacer {
+    height: 100vh;
+}
+
+.container-fluid {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}

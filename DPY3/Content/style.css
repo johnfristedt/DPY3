@@ -1,53 +1,27 @@
-﻿html {
+﻿@import url('animations.css');
+
+html {
     width: 100%;
     margin: 0;
     padding: 0;
 }
 
 body {
+    position: relative;
+    top: 50px;
     font-family: 'Lucida Console', monaco, monospace;
     margin: 0;
     padding: 0;
-    background-image: url("../Content/images/bg.jpg");
     background-position: center;
+}
+
+header, main, footer {
+    z-index: 10000;
 }
 
 .row {
     margin: 0;
     padding: 0;
-}
-
-#mainMenu {
-    list-style: none;
-    margin: 0 auto;
-    padding: 0;
-}
-
-#mainMenu li {
-    width: calc(100% / 4);
-    background: #bdc3c7;
-    float: left;
-    margin: 0;
-    padding: 8vw 1vw 0 0;
-    border-left: 0.5vw solid white;
-    text-align: right;
-    font-size: 4vw;
-}
-
-#mainMenu li a {
-    text-decoration: none;
-}
-
-#mainMenu li a:hover {
-    cursor: default;
-    text-decoration: none;
-}
-
-#mainMenu li:first-of-type {
-    border-left: none;
-}
-
-#mainMenu li:last-of-type {
 }
 
 .content {
@@ -64,4 +38,17 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
+}
+
+.ball {
+    position: fixed;
+    top: 600px;
+    left: 50vw;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    /*animation: floatUp 10s linear;
+    animation-fill-mode: forwards;*/
+    z-index: -1;
 }

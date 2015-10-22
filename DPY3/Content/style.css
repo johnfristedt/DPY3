@@ -8,6 +8,8 @@ body {
     font-family: 'Lucida Console', monaco, monospace;
     margin: 0;
     padding: 0;
+    background-image: url("../Content/images/bg.jpg");
+    background-position: center;
 }
 
 .row {
@@ -50,6 +52,8 @@ body {
 
 .content {
     background: gray;
+    width: 95%;
+    margin: 0 auto;
 }
 
 .spacer {

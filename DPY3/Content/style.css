@@ -12,11 +12,43 @@ body {
     font-family: 'Lucida Console', monaco, monospace;
     margin: 0;
     padding: 0;
-    background-position: center;
+    background-color: black;
+    background-image: url(../Content/images/skybg.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(rgba(0,0,0,0.2)), color-stop(51%,rgba(35,45,125,1)), color-stop(65%,rgba(44,57,159,1)), color-stop(100%,rgba(195,209,255,1))), url(../Content/images/skybg.jpg);
+    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.2),rgba(35,45,125,1) 51%,rgba(44,57,159,1) 65%,rgba(195,209,255,1) 100%), url(../Content/images/skybg.jpg);
+    background-image: -moz-linear-gradient(top, rgba(0,0,0,0.2), rgba(35,45,125,1) 51%, rgba(44,57,159,1) 65%, rgba(195,209,255,1) 100%), url(../Content/images/skybg.jpg);
+    background-image: -o-linear-gradient(top, rgba(0,0,0,0.2),rgba(35,45,125,1) 51%,rgba(44,57,159,1) 65%,rgba(195,209,255,1) 100%), url(../Content/images/skybg.jpg);
+    background-image: linear-gradient(top, rgba(0,0,0,0.2),rgba(35,45,125,1) 51%,rgba(44,57,159,1) 65%,rgba(195,209,255,1) 100%), url(../Content/images/skybg.jpg);
 }
 
 header, main, footer {
     z-index: 10000;
+}
+
+#satellite {
+    position: absolute;
+    top: 200px;
+    right: 20px;
+    width: 30vw;
+    height: 30vw;
+    background-image: url(../Content/images/satellite.png);
+    background-size: contain;
+    z-index: 10;
+}
+
+#grass {
+    width: 50vw;
+    height: 200px;
+    border-radius: 100% 50% 0 0;
+    background-color: #00ff00;
+}
+
+#grass:after {
+    width: 50vw;
+    height: 200px;
+    content: "";
+    border-radius: 50% 100%;
+    background-color: #00ff00;
 }
 
 .row {
@@ -25,9 +57,14 @@ header, main, footer {
 }
 
 .content {
-    background: gray;
-    width: 95%;
-    margin: 0 auto;
+    width: 60%;
+    margin: 0 auto 0 20px;
+    padding: 10px 40px;
+    color: white;
+    text-shadow: -2px 0 rgba(0,0,0,0.5), 0 2px rgba(0,0,0,0.5), 2px 0 rgba(0,0,0,0.5), 0 -2px rgba(0,0,0,0.5);
+    font-size: 2.5vw;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 20px;
 }
 
 .spacer {
@@ -51,4 +88,34 @@ header, main, footer {
     /*animation: floatUp 10s linear;
     animation-fill-mode: forwards;*/
     z-index: -1;
+}
+
+.parallax {
+    perspective: 1px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.parallax__layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.parallax__layer--base {
+    transform: translateZ(0);
+}
+
+.parallax__layer--back {
+    transform: translateZ(-1px);
+}
+
+@media (min-width: 770px) {
+    .content {
+        width: 50%;
+        font-size: 2vw;
+    }
 }

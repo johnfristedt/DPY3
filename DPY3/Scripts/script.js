@@ -29,7 +29,7 @@ $('body').on({
 $(document).scroll(function () {
     console.log();
     $(body).css({ backgroundPosition: '0px ' + $(window).scrollTop() / 2 + 'px' });
-    $('#satellite').css({ top: (-$(window).scrollTop()) + 400 + 'px' });
+    $('#satellite').css({ top: (-$(window).scrollTop() / 2) + 2000 + 'px' });
 });
 
 //$(document).scroll(function () {

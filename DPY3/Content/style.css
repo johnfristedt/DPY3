@@ -19,6 +19,7 @@ body {
     background-image: -moz-linear-gradient(top, rgba(0,0,0,0.2), rgba(35,45,125,1) 51%, rgba(44,57,159,1) 65%, rgba(195,209,255,1) 100%), url(../Content/images/skybg.jpg);
     background-image: -o-linear-gradient(top, rgba(0,0,0,0.2),rgba(35,45,125,1) 51%,rgba(44,57,159,1) 65%,rgba(195,209,255,1) 100%), url(../Content/images/skybg.jpg);
     background-image: linear-gradient(top, rgba(0,0,0,0.2),rgba(35,45,125,1) 51%,rgba(44,57,159,1) 65%,rgba(195,209,255,1) 100%), url(../Content/images/skybg.jpg);
+    background-size: 100% 60%;
 }
 
 header, main, footer {
@@ -27,7 +28,7 @@ header, main, footer {
 
 #satellite {
     position: absolute;
-    top: 200px;
+    top: 2000px;
     right: 20px;
     width: 30vw;
     height: 30vw;
@@ -37,18 +38,37 @@ header, main, footer {
 }
 
 #grass {
-    width: 50vw;
-    height: 200px;
-    border-radius: 100% 50% 0 0;
-    background-color: #00ff00;
+    position: relative;
+    left: 0;
+    width: 770px;
+    height: 161px;
+    background-size: contain;
+    background-image: url(../Content/images/ground.png);
+    background-repeat: no-repeat;
+    overflow: hidden;
+    margin: 40px 0 0 0;
+    z-index: 10;
 }
 
-#grass:after {
-    width: 50vw;
-    height: 200px;
+#grassfill {
+    position: absolute;
+    bottom: -1px;
+    width: 100vw;
+    height: 50px;
     content: "";
-    border-radius: 50% 100%;
-    background-color: #00ff00;
+    background-image: url(../Content/images/groundfill.png);
+    background-repeat: repeat-x;
+    float: left;
+    z-index: 10;
+}
+
+.cloud {
+    width: 30vw;
+    height: 20vw;
+    background-image: url(../Content/images/cloud.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    float: left;
 }
 
 .row {
@@ -88,29 +108,6 @@ header, main, footer {
     /*animation: floatUp 10s linear;
     animation-fill-mode: forwards;*/
     z-index: -1;
-}
-
-.parallax {
-    perspective: 1px;
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-
-.parallax__layer {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
-
-.parallax__layer--base {
-    transform: translateZ(0);
-}
-
-.parallax__layer--back {
-    transform: translateZ(-1px);
 }
 
 @media (min-width: 770px) {

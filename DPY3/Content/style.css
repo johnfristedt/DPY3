@@ -19,7 +19,7 @@ body {
     background-image: -moz-linear-gradient(top, rgba(0,0,0,0.2), rgba(35,45,125,1) 51%, rgba(44,57,159,1) 65%, rgba(195,209,255,1) 100%), url(../Content/images/skybg.jpg);
     background-image: -o-linear-gradient(top, rgba(0,0,0,0.2),rgba(35,45,125,1) 51%,rgba(44,57,159,1) 65%,rgba(195,209,255,1) 100%), url(../Content/images/skybg.jpg);
     background-image: linear-gradient(top, rgba(0,0,0,0.2),rgba(35,45,125,1) 51%,rgba(44,57,159,1) 65%,rgba(195,209,255,1) 100%), url(../Content/images/skybg.jpg);
-    background-size: 100% 60%;
+    background-size: 60%;
 }
 
 header, main, footer {

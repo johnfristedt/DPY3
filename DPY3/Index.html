@@ -30,7 +30,7 @@
             </nav>
         </header>
         <main>
-            <div ng-app="dpyApp" ng-controller="dpyCtrl">
+            <div ng-app="siteApp" ng-controller="siteCtrl">
                 <div id="satellite"></div>
                 <div class="row">
                     <div class="col-md-12 content">
@@ -50,12 +50,7 @@
                         </p>
                     </div>
                     <div class="col-md-12 spacer">
-                        <div class="cloud"></div>
-                        <div class="cloud"></div>
-                        <div class="cloud"></div>
-                        <div class="cloud"></div>
-                        <div class="cloud"></div>
-                        <div class="cloud"></div>
+                        <div class="cloud" ng-repeat="item in clouds"></div>
                     </div>
                     <div class="col-md-12 content">
                         <h1 id="stuff">Stuff</h1>
@@ -85,6 +80,7 @@
     </div>
 
     <script src="Scripts/jquery-2.1.4.min.js"></script>
+    <script src="Scripts/angular.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
     <script src="Scripts/script.js"></script>
 </body>

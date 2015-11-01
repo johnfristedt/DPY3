@@ -14,12 +14,12 @@ body {
     padding: 0;
     background-color: black;
     background-image: url(../Content/images/skybg.jpg);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(rgba(0,0,0,0.2)), color-stop(51%,rgba(35,45,125,1)), color-stop(65%,rgba(44,57,159,1)), color-stop(100%,rgba(195,209,255,1))), url(../Content/images/skybg.jpg);
-    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.2),rgba(35,45,125,1) 51%,rgba(44,57,159,1) 65%,rgba(195,209,255,1) 100%), url(../Content/images/skybg.jpg);
-    background-image: -moz-linear-gradient(top, rgba(0,0,0,0.2), rgba(35,45,125,1) 51%, rgba(44,57,159,1) 65%, rgba(195,209,255,1) 100%), url(../Content/images/skybg.jpg);
+    /*background-image: -webkit-gradient(linear, left top, left bottom, color-stop(rgba(0,0,0,0.2)), color-stop(51%,rgba(35,45,125,1)), color-stop(65%,rgba(44,57,159,1)), color-stop(100%,rgba(195,209,255,1))), url(../Content/images/skybg.jpg);*/
+    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.2) 20%,rgba(35,45,125,1) 60%,rgba(44,57,159,1) 70%,rgba(195,209,255,1) 100%), url(../Content/images/skybg.jpg);
+    /*background-image: -moz-linear-gradient(top, rgba(0,0,0,0.2), rgba(35,45,125,1) 51%, rgba(44,57,159,1) 65%, rgba(195,209,255,1) 100%), url(../Content/images/skybg.jpg);
     background-image: -o-linear-gradient(top, rgba(0,0,0,0.2),rgba(35,45,125,1) 51%,rgba(44,57,159,1) 65%,rgba(195,209,255,1) 100%), url(../Content/images/skybg.jpg);
-    background-image: linear-gradient(top, rgba(0,0,0,0.2),rgba(35,45,125,1) 51%,rgba(44,57,159,1) 65%,rgba(195,209,255,1) 100%), url(../Content/images/skybg.jpg);
-    background-size: 60%;
+    background-image: linear-gradient(top, rgba(0,0,0,0.2),rgba(35,45,125,1) 51%,rgba(44,57,159,1) 65%,rgba(195,209,255,1) 100%), url(../Content/images/skybg.jpg);*/
+    background-size: 50%;
 }
 
 header, main, footer {
@@ -40,12 +40,14 @@ header, main, footer {
 #grass {
     position: relative;
     left: 0;
-    width: 770px;
+    bottom: 0;
+    width: 100%;
+    max-width: 770px;
+    background-size: 770px 161px;
     height: 161px;
-    background-size: contain;
+    background-size: cover;
     background-image: url(../Content/images/ground.png);
     background-repeat: no-repeat;
-    overflow: hidden;
     margin: 40px 0 0 0;
     z-index: 10;
 }
@@ -53,7 +55,7 @@ header, main, footer {
 #grassfill {
     position: absolute;
     bottom: -1px;
-    width: 100vw;
+    width: 100%;
     height: 50px;
     content: "";
     background-image: url(../Content/images/groundfill.png);

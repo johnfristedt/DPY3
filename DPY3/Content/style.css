@@ -26,8 +26,8 @@ header, main, footer {
     z-index: 10000;
 }
 
-main div {
-}
+    main div {
+    }
 
 h1 {
     font-weight: bold;
@@ -79,8 +79,16 @@ form {
     z-index: 0;
 }
 
+#sun {
+    bottom: 0;
+    width: 600px;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-image: url(../Content/images/sun.png);
+}
+
 #planet {
-    top: 100px;
+    top: 300px;
     right: 0px;
     width: 40vw;
     height: 40vw;
@@ -183,6 +191,23 @@ form {
         font-family: 'Lucida Console', monaco, monospace;
     }
 
+#linkedin {
+    position: absolute;
+    top: 5px;
+    right: 7.5px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    background: url(../Content/images/linkedin.png);
+    background-size: contain;
+    display: inline-block;
+    color: white;
+}
+
+#linkedin:hover {
+    cursor: pointer;
+}
+
 @media (min-width: 769px) {
     h1 {
         font-size: 32px;
@@ -269,5 +294,12 @@ form {
 
     #accordion div {
         font-size: 12px;
+    }
+
+    #linkedin {
+        top: 7.5px;
+        right: 70px;
+        width: 35px;
+        height: 35px;
     }
 }

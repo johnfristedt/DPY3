@@ -11,8 +11,8 @@ var scrollTime = 3000; // Milliseconds
 var satelliteOffset = 2000; // Pixels
 var satelliteSpeed = 0.5;  // Multiplier
 
-var planetOffset = 100; // Pixels
-var planetSpeed = 0.3;  // Multiplier
+var planetOffset = 300; // Pixels
+var planetSpeed = 1.0;  // Multiplier
 
 var backgroundParallaxSpeed = 0.7;  // Multiplier
 var numberOfClouds = 3;
@@ -22,6 +22,10 @@ $("#accordion").accordion({
     heightStyle: "content",
     autoHeight: false,
     clearStyle: true,
+});
+
+$('#linkedin').click(function () {
+    window.location.href = 'https://se.linkedin.com/pub/john-fristedt/76/706/169';
 });
 
 $('#mainMenu li a, .navbar-brand').click(function (event) {

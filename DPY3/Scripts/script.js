@@ -50,7 +50,13 @@ angular.module('DPY3.SiteCtrl', []).controller('siteCtrl', ['$scope', '$http', f
     };
 
     $scope.sendMessage = function () {
-        console.log('send');
+        $scope.name = '';
+        $scope.email = '';
+        $scope.message = '';
+
+        // TODO: Ajax message to server
+
+        alert('Thanks for your message!');
     }
 
     for (var i = 0; i < numberOfClouds; i++) {

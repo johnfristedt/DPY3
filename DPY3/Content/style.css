@@ -213,6 +213,10 @@ form {
         width: 60%;
     }
 
+    input[type=text], #message {
+        font-size: 32px;
+    }
+
     .cloud {
         margin-top: -30vh;
         margin-left: -10vw;

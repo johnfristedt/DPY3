@@ -7,6 +7,9 @@
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/animations.css" rel="stylesheet" />
     <link href="Content/style.css" rel="stylesheet" />
+    <link href="Content/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
+    <link href="Content/jquery-ui/jquery-ui.structure.min.css" rel="stylesheet" />
+    <link href="Content/jquery-ui/jquery-ui.theme.min.css" rel="stylesheet" />
 </head>
 <body>
     <div class="container-fluid">
@@ -18,68 +21,102 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#home">Home</a>
+                    <a class="navbar-brand" href="#home">Top</a>
                 </div>
                 <div class="collapse navbar-collapse" id="mainMenu">
                     <ul class="nav navbar-nav">
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#stuff">Stuff</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#about">About me</a></li>
+                        <li><a href="#stuff">Stuff I know</a></li>
+                        <li><a href="#contact">Contact me</a></li>
                     </ul>
                 </div>
             </nav>
         </header>
-        <main>
-            <div ng-app="siteApp" ng-controller="siteCtrl">
-                <div id="satellite"></div>
-                <div class="row">
-                    <div class="col-md-12 content">
-                        <h1 id="home">Home</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, cu usu minim movet. Meis fugit ei per, ut nam copiosae liberavisse interpretaris, in ius corrumpit tincidunt. Putant doctus vix ea, id agam munere pro. Eos ipsum nostrum albucius id. Wisi ornatus nec in, vis et praesent mediocritatem. Sit cu utamur cotidieque.
-                        </p>
-                    </div>
-                    <div class="col-md-12 spacer"></div>
-                    <div class="col-md-12 content">
-                        <h1 id="about">About</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, cu usu minim movet. Meis fugit ei per, ut nam copiosae liberavisse interpretaris, in ius corrumpit tincidunt. Putant doctus vix ea, id agam munere pro. Eos ipsum nostrum albucius id. Wisi ornatus nec in, vis et praesent mediocritatem. Sit cu utamur cotidieque.
-                        </p>
-                        <p>
-                            Vix at tritani posidonium. Pri ut nisl harum contentiones, te eius intellegat vix. Porro vidisse phaedrum ne mei. Eu has velit graeco necessitatibus, sit ut ferri sanctus. No ius velit recteque erroribus, quando menandri in eam, mea prompta ancillae at. Ut eleifend inimicus per.
-                        </p>
-                    </div>
-                    <div class="col-md-12 spacer">
-                        <div class="cloud" ng-repeat="item in clouds"></div>
-                    </div>
-                    <div class="col-md-12 content">
-                        <h1 id="stuff">Stuff</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, cu usu minim movet. Meis fugit ei per, ut nam copiosae liberavisse interpretaris, in ius corrumpit tincidunt. Putant doctus vix ea, id agam munere pro. Eos ipsum nostrum albucius id. Wisi ornatus nec in, vis et praesent mediocritatem. Sit cu utamur cotidieque.
-                        </p>
-                        <p>
-                            Vix at tritani posidonium. Pri ut nisl harum contentiones, te eius intellegat vix. Porro vidisse phaedrum ne mei. Eu has velit graeco necessitatibus, sit ut ferri sanctus. No ius velit recteque erroribus, quando menandri in eam, mea prompta ancillae at. Ut eleifend inimicus per.
-                        </p>
-                    </div>
-                    <div class="col-md-12 spacer"></div>
-                    <div class="col-md-12 content">
-                        <h1 id="contact">Contact</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, cu usu minim movet. Meis fugit ei per, ut nam copiosae liberavisse interpretaris, in ius corrumpit tincidunt. Putant doctus vix ea, id agam munere pro. Eos ipsum nostrum albucius id. Wisi ornatus nec in, vis et praesent mediocritatem. Sit cu utamur cotidieque.
-                        </p>
-                        <p>
-                            Vix at tritani posidonium. Pri ut nisl harum contentiones, te eius intellegat vix. Porro vidisse phaedrum ne mei. Eu has velit graeco necessitatibus, sit ut ferri sanctus. No ius velit recteque erroribus, quando menandri in eam, mea prompta ancillae at. Ut eleifend inimicus per.
-                        </p>
+        <main ng-app="siteApp" ng-controller="siteCtrl">
+            <div id="planet" class="foregroundObject"></div>
+            <div id="satellite" class="foregroundObject"></div>
+            <div class="row">
+                <div id="home" class="col-md-12 content">
+                    <h1>Hello!</h1>
+                    <p>
+                        My name is John, I’m a web- and full stack developer in C# and .NET. I have experience working with both design and functional front-end as well as building backend applications using ASP.NET MVC and WebApi, though I feel most at home when I’m allowed to get my nails dirty with behind-the-scenes business logic stuff!
+                    </p>
+                </div>
+                <div class="col-md-12 spacer"></div>
+                <div class="col-md-12 content">
+                    <h1 id="about">About me</h1>
+                    <p>
+                        When it comes to coding I love finding elegant and simple solutions to complex problems. I strive to be as open and helpful as I can when it comes to what I do and I recognize that they key to success as a developer often lies with your ability to work with others.
+                    </p>
+                </div>
+                <div class="col-md-12 spacer"></div>
+                <div id="stuff" class="col-md-12 content">
+                    <h1>Stuff I know</h1>
+                    <div id="accordion">
+                        <h3>AngularJS</h3>
+                        <div>
+                            <p>
+                                An open source framework developed to help web developers separate their models, views and controllers when building single page applications. I've been using it in most of my projects as of late and it's become an invaluable tool!
+                            </p>
+                        </div>
+                        <h3>ReactJS</h3>
+                        <div>
+                            <p>
+                                React is, like Angular, a framework to assist when building single page applications. It's a relatively new tool in my toolbox, but one I'm getting more and more fond of.
+                            </p>
+                        </div>
+                        <h3>Bootstrap</h3>
+                        <div>
+                            <p>
+                                Another open source front-end framework, bootstrap assists the developer in creating consistent and responsive interfaces. Another tool that's become an essential part of my everyday work.
+                            </p>
+                        </div>
+                        <h3>C#</h3>
+                        <div>
+                            <p>
+                                In my days I have worked with several programming languages, but C# is the one I've grown to like the most. Microsoft have done an excellent job of providing us developers with the tools and environments we need to be as productive as possible while delivering high quality products!
+                            </p>
+                        </div>
+                        <h3>ASP.NET MVC</h3>
+                        <div>
+                            <p>
+                                ASP.NET MVC is a web application framework which implements the <em>Model-View-Controller</em> pattern. Combined with the tools and utilities of Visual Studio I am able to build advanced back-end applications in no time!
+                            </p>
+                        </div>
+                        <h3>ASP.NET WebApi</h3>
+                        <div>
+                            <p>
+                                Much like MVC, the WebApi provides structure and tools to grant front-end applications access to resources and functions on the webserver or database.
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div id="grass"></div>
-                <div id="grassfill"></div>
+                <div class="col-md-12 spacer">
+                    <div class="cloud col-md-6" style="top: {{cloud.top}}vw; left: {{cloud.left}}vw;" ng-repeat="cloud in clouds"></div>
+                </div>
+                <div id="contact" class="col-md-12 content">
+                    <h1>Send me a message!</h1>
+                    <form>
+                        <label for="name">Who are you?</label>
+                        <input type="text" title="Tell me your name, or maybe who you represent" id="name" class="form-control" ng-model="name" />
+                        <label for="email">You may reach me at:</label>
+                        <input type="text" title="Tell me how to reach you, perhaps with an e-mail address or phone number" id="email" class="form-control" ng-model="email" />
+                        <label for="message">I would like to say:</label>
+                        <textarea id="message" title="What would you like to tell me?" class="form-control" rows="10" ng-model="message"></textarea>
+                        <button type="button" id="sendMessage" class="btn btn-default" value="Send" ng-click="sendMessage()">Send</button>
+                    </form>
+                </div>
             </div>
+            <div id="grass"></div>
         </main>
+        <div id="grassfill"></div>
         <footer></footer>
     </div>
 
     <script src="Scripts/jquery-2.1.4.min.js"></script>
+    <script src="Scripts/jquery.nicescroll.min.js"></script>
+    <script src="Scripts/jquery-ui.min.js"></script>
+    <script>$(document).tooltip();</script>
     <script src="Scripts/angular.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
     <script src="Scripts/app.js"></script>

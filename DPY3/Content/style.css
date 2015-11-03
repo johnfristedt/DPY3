@@ -15,7 +15,7 @@ body {
     background-color: black;
     background-image: url(../Content/images/skybg.jpg);
     /*background-image: -webkit-gradient(linear, left top, left bottom, color-stop(rgba(0,0,0,0.2)), color-stop(51%,rgba(35,45,125,1)), color-stop(65%,rgba(44,57,159,1)), color-stop(100%,rgba(195,209,255,1))), url(../Content/images/skybg.jpg);*/
-    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.2) 20%,rgba(35,45,125,1) 60%,rgba(44,57,159,1) 70%,rgba(195,209,255,1) 100%), url(../Content/images/skybg.jpg);
+    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.2) 15%,rgba(35,45,125,1) 55%,rgba(44,57,159,1) 65%,rgba(195,209,255,1) 100%), url(../Content/images/skybg.jpg);
     /*background-image: -moz-linear-gradient(top, rgba(0,0,0,0.2), rgba(35,45,125,1) 51%, rgba(44,57,159,1) 65%, rgba(195,209,255,1) 100%), url(../Content/images/skybg.jpg);
     background-image: -o-linear-gradient(top, rgba(0,0,0,0.2),rgba(35,45,125,1) 51%,rgba(44,57,159,1) 65%,rgba(195,209,255,1) 100%), url(../Content/images/skybg.jpg);
     background-image: linear-gradient(top, rgba(0,0,0,0.2),rgba(35,45,125,1) 51%,rgba(44,57,159,1) 65%,rgba(195,209,255,1) 100%), url(../Content/images/skybg.jpg);*/
@@ -26,15 +26,79 @@ header, main, footer {
     z-index: 10000;
 }
 
-#satellite {
+main div {
+}
+
+h1 {
+    font-weight: bold;
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    font-size: 6vw;
+}
+
+label {
+    text-shadow: none;
+}
+
+input[type=text] {
+    width: 100%;
+    height: 5vw;
+    font-size: 2.5vw;
+}
+
+input[type=text], #message {
+    background-color: rgba(0,0,0,0);
+    border-radius: 0;
+    color: white;
+    margin-bottom: 2vw;
+}
+
+#message {
+    width: 100%;
+}
+
+form {
+}
+
+#sendMessage {
+    width: 100px;
+    margin: 0 auto 2vw auto;
+}
+
+#contact {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#stuff {
+    height: auto;
+}
+
+.foregroundObject {
     position: absolute;
+    background-size: contain;
+    z-index: 0;
+}
+
+#planet {
+    top: 100px;
+    right: 0px;
+    width: 40vw;
+    height: 40vw;
+    max-width: 500px;
+    max-height: 500px;
+    background-image: url(../Content/images/earth.png);
+    background-position-x: 100px;
+    background-repeat: no-repeat;
+}
+
+#satellite {
     top: 2000px;
     right: 20px;
     width: 30vw;
     height: 30vw;
+    max-width: 350px;
+    max-height: 350px;
     background-image: url(../Content/images/satellite.png);
-    background-size: contain;
-    z-index: 10;
 }
 
 #grass {
@@ -65,12 +129,14 @@ header, main, footer {
 }
 
 .cloud {
-    width: 30vw;
-    height: 20vw;
+    position: absolute;
+    width: 25vw;
+    max-width: 400px;
+    height: 15vw;
+    padding: 0;
     background-image: url(../Content/images/cloud.png);
-    background-size:contain;
+    background-size: contain;
     background-repeat: no-repeat;
-    float: left;
 }
 
 .row {
@@ -90,7 +156,9 @@ header, main, footer {
 }
 
 .spacer {
+    max-width: 80vw;
     height: 100vh;
+    overflow: visible;
 }
 
 .container-fluid {
@@ -99,22 +167,103 @@ header, main, footer {
     padding: 0;
 }
 
-.ball {
-    position: fixed;
-    top: 600px;
-    left: 50vw;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    background-color: black;
-    /*animation: floatUp 10s linear;
-    animation-fill-mode: forwards;*/
-    z-index: -1;
+#accordion {
+    margin-bottom: 1.5vw;
+    background-color: rgba(0,0,0,0);
 }
 
-@media (min-width: 770px) {
+    #accordion div, #accordion h3 {
+        background-color: rgba(0,0,0,0);
+        border: none;
+        font-family: 'Lucida Console', monaco, monospace;
+    }
+
+    #accordion div {
+        font-size: 12px;
+        font-family: 'Lucida Console', monaco, monospace;
+    }
+
+@media (min-width: 769px) {
+    h1 {
+        font-size: 32px;
+    }
+
     .content {
         width: 50%;
         font-size: 2vw;
+    }
+}
+
+@media (min-width: 992px) {
+    main {
+        width: 80vw;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    label {
+        font-size: 24px;
+    }
+
+    input[type=text] {
+        height: 50px;
+        width: 60%;
+    }
+
+    .cloud {
+        margin-top: -30vh;
+        margin-left: -10vw;
+    }
+
+    #contact {
+        width: 80%;
+    }
+
+    .content {
+        width: 80%;
+        margin: 0 auto 0 20px;
+        padding: 10px 40px;
+        color: white;
+        text-shadow: -2px 0 rgba(0,0,0,0.5), 0 2px rgba(0,0,0,0.5), 2px 0 rgba(0,0,0,0.5), 0 -2px rgba(0,0,0,0.5);
+        font-size: 16px;
+        background-color: rgba(0,0,0,0.5);
+        border-radius: 20px;
+    }
+
+    #home, #about {
+        width: 50vw;
+    }
+}
+
+@media (max-width: 768px) {
+    input[type=text] {
+        width: 100%;
+    }
+
+    #message {
+        width: 100%;
+    }
+
+    .content {
+    }
+
+    #stuff {
+        width: 88%;
+    }
+
+    #accordion div, #accordion h3 {
+        background-color: rgba(0,0,0,0);
+        border: none;
+    }
+
+    #accordion h3 {
+        font-size: 16px;
+    }
+
+    #accordion div {
+        font-size: 12px;
     }
 }
